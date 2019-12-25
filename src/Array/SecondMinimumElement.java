@@ -14,19 +14,20 @@ import java.util.Scanner;
  * @author piya
  */
 public class SecondMinimumElement {
-
+    private static final int ARRAY_SIZE = 5;
     /**
      * Accept an integer array input from user
      *
      * @return anArray input from user
      */
     public static int[] getIntegerArray(){
-        int[] anArray = new int[5];
+        int[] anArray = new int[ARRAY_SIZE];
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter integer array elements: ");
         for (int i=0; i< anArray.length ; i++){
             anArray[i] = sc.nextInt();
         }
+        System.out.println("Input array: " + Arrays.toString(anArray));
         return anArray;
     }
 
