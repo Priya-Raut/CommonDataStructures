@@ -25,10 +25,36 @@ public class LinkedList {
         Node newNode = new Node(data);
         newNode.setNextNode(this.head);
         this.head = newNode;
-}
+    }
 
-@Override
-        public String toString() {
+    public void deleteFromStart() {
+        this.head = this.head.getNextNode();
+    }
+
+    public int length() {
+        int length = 0;
+        Node current = this.head;
+        while (current != null) {
+            length++;
+            current = current.getNextNode();
+        }
+        return length;
+    }
+
+    public Node findNode(int data) {
+        Node current = this.head;
+        while (current != null) {
+            if (current.getData() == data) {
+                return current;
+            } else {
+                current = current.getNextNode();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
         String result = "LinkedList: ";
         Node current = this.head;
         System.out.println(current);

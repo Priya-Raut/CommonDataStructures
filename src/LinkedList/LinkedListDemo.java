@@ -10,6 +10,7 @@ package LinkedList;
  * @author piya
  */
 public class LinkedListDemo {
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
@@ -17,7 +18,12 @@ public class LinkedListDemo {
         list.insertAtHead(2);
         list.insertAtHead(3);
         list.insertAtHead(4);
-
         System.out.println(list);
+
+        list.deleteFromStart();
+        System.out.println(list);
+
+        System.out.println("Found: " + list.findNode(4));
+        System.out.println("Length: " + list.length());
     }
 }
