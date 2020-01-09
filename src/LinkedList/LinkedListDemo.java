@@ -6,7 +6,8 @@
 package LinkedList;
 
 /**
- *
+ * A class to demonstrate the functions from LinkedList class. 
+ * 
  * @author piya
  */
 public class LinkedListDemo {

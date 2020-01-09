@@ -6,6 +6,7 @@
 package LinkedList;
 
 /**
+ * A class to demonstrate the functions from DoublyEndedLinkedList class. 
  *
  * @author piya
  */
