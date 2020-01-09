@@ -14,13 +14,16 @@ public class LinkedListDemo {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
-        list.insertAtHead(1);
-        list.insertAtHead(2);
-        list.insertAtHead(3);
-        list.insertAtHead(4);
+        list.insertAtHead(20);
+        list.insertAtHead(15);
+        list.insertAtHead(10);
+        list.insertAtHead(5);
         System.out.println(list);
 
         list.deleteFromStart();
+        System.out.println(list);
+
+        list.insertInBetweenSortedList(25);
         System.out.println(list);
 
         System.out.println("Found: " + list.findNode(4));

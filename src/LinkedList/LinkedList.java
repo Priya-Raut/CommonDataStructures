@@ -27,6 +27,39 @@ public class LinkedList {
         this.head = newNode;
     }
 
+    /**
+     * Insert in between the nodes to keep the list sorted.
+     *
+     * @param data
+     */
+    public void insertInBetweenSortedList(int data) {
+        Node newNode = new Node(data);
+        boolean result = false;
+        // case 1: insert before head
+        Node current = this.head;
+        if (data < this.head.getData()) {
+            insertAtHead(data);
+            result = true;
+            System.out.println("Inserted before head");
+        }
+        // case 2: insert in between nodes
+        while (current.getNextNode() != null) {
+            if (data > current.getData() && data < current.getNextNode().getData()) {
+                newNode.setNextNode(current.getNextNode());
+                current.setNextNode(newNode);
+                result = true;
+                System.out.println("Inserted in between");
+            } else {
+                current = current.getNextNode();
+            }
+        }
+        // case 3: insert at end of linked list
+        if (!result) {
+            System.out.println("Inserted at the end");
+            current.setNextNode(newNode);
+        }
+    }
+
     public void deleteFromStart() {
         this.head = this.head.getNextNode();
     }
