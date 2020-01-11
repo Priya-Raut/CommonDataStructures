@@ -5,8 +5,6 @@
  */
 package Stack;
 
-import com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver;
-
 /**
  * A class that implements Stack data structure using array.
  *
@@ -14,7 +12,7 @@ import com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver;
  */
 public class Stack {
 
-    private final int[] storage = new int[5];
+    private final int[] storage = new int[100];
     private int top = -1;
 
     /**
@@ -43,10 +41,14 @@ public class Stack {
 
     /**
      * Returns the top element of the stack without removing it from the stack.
-     *
+     * Throws runtime exception if stack is empty.
+     * 
      * @return top element of the stack
      */
     public int peek() {
+        if(isEmpty()){
+            throw new RuntimeException("Stack is empty");
+        }
         return storage[top];
     }
 
