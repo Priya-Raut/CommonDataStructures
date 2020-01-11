@@ -3,19 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LinkedList;
+package LinkedList.Implementation;
 
 /**
- * Class represents Node of a linked list with integer data
- * 
+ *
  * @author piya
  */
-public class Node {
-    private int data;
-    private Node nextNode;
+public class DNode {
     
-    public Node(int data){
+    private int data;
+    private DNode prevNode;
+    private DNode nextNode;
+
+    public DNode(int data) {
         this.data = data;
+    }
+
+    public DNode getPrevNode() {
+        return prevNode;
+    }
+
+    public void setPrevNode(DNode prevNode) {
+        this.prevNode = prevNode;
     }
 
     public int getData() {
@@ -26,17 +35,17 @@ public class Node {
         this.data = data;
     }
 
-    public Node getNextNode() {
+    public DNode getNextNode() {
         return nextNode;
     }
 
-    public void setNextNode(Node nextNode) {
+    public void setNextNode(DNode nextNode) {
         this.nextNode = nextNode;
     }
 
     @Override
     public String toString() {
-        return "data: "+ data +" ";
+        return "data=" + data + ", ";
     }
     
 }

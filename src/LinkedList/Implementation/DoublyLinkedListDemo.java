@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LinkedList;
+package LinkedList.Implementation;
 
 /**
- * A class to demonstrate the functions from DoublyEndedLinkedList class. 
  *
  * @author piya
  */
-public class DoublyEndedLinkedListDemo {
+public class DoublyLinkedListDemo {
 
     public static void main(String[] args) {
-        DoublyEndedLinkedList list = new DoublyEndedLinkedList();
-        list.insertAtTail(3);
-        list.insertAtTail(2);
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.setHead(new DNode(2));
+        list.insertAtHead(4);
+        list.insertAtHead(5);
+        list.insertAtHead(3);
         System.out.println(list);
     }
 }
