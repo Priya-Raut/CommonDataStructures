@@ -63,11 +63,10 @@ public class Queue {
      * @return head element of the Queue
      */
     public int peek() {
-        if (isEmpty()) {
-            throw new RuntimeException("Empty Queue.");
+        if(head != -1){
+            return storage[head];
         }
-        return storage[head];
-
+        return -1;
     }
 
     /**

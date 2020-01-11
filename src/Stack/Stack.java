@@ -46,10 +46,10 @@ public class Stack {
      * @return top element of the stack
      */
     public int peek() {
-        if(isEmpty()){
-            throw new RuntimeException("Stack is empty");
+        if(top != -1){
+            return storage[top];
         }
-        return storage[top];
+        return -1;
     }
 
     /**
