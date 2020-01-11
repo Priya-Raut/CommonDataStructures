@@ -17,14 +17,21 @@ public class Stack {
     private final int[] storage = new int[5];
     private int top = -1;
 
+    /**
+     * Get top element of the stack.
+     *
+     * @return top element of the stack.
+     */
     public int getTop() {
         return top;
     }
 
-    public void setTop(int top) {
-        this.top = top;
-    }
-
+    /**
+     * Inserts element at the top of the stack.
+     * Throws runtime exception if stack is full
+     * 
+     * @param element to be inserted into the stack.
+     */
     public void push(int element) {
         //if already full, don't push
         if (top == storage.length - 1) {
@@ -34,10 +41,19 @@ public class Stack {
         storage[top] = element;
     }
 
+    /**
+     * Returns the top element of the stack without removing it from the stack.
+     *
+     * @return top element of the stack
+     */
     public int peek() {
         return storage[top];
     }
 
+    /**
+     * Removes top element of the stack.
+     * Throws runtime exception if stack is empty.
+     */
     public void pop() {
         //if empty, don't pop
         if (isEmpty()) {
@@ -46,10 +62,20 @@ public class Stack {
         top--;
     }
 
+    /**
+     * Check if stack is empty or not.
+     *
+     * @return true if stack is empty, false otherwise.
+     */
     public boolean isEmpty() {
         return top == -1;
     }
 
+    /**
+     * Returns the size of the stack.
+     *
+     * @return size of the stack
+     */
     public int size() {
         int i = top;
         int count = 0;
@@ -60,6 +86,11 @@ public class Stack {
         return count;
     }
 
+    /**
+     * Returns a string representation of the stack.
+     * 
+     * @return a string representation of the stack.
+     */
     @Override
     public String toString() {
         String result = "Stack: ";
