@@ -34,12 +34,20 @@ public class BinarySearchTree {
     }
 
     /**
+     * Delete the node with given data.
      *
-     * @param data
-     * @return
+     * @param data the data present in the node to be deleted
      */
-    public TreeNode delete(int data) {
-        return null;
+    public void delete(int data) {
+        if (this.root != null) {
+            //case 0: if node to be deleted is root
+            if(this.root.getData() == data){
+                this.root = null;
+            }
+            else{
+                root.delete(data);
+            }
+        }
     }
 
     /**
@@ -93,15 +101,22 @@ public class BinarySearchTree {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(25);
         tree.insert(20);
-        tree.insert(30);
-        tree.insert(22);
         tree.insert(19);
-        tree.insert(35);
+        tree.insert(18);
+        tree.insert(21);
+        tree.insert(22);
+        tree.insert(50);
+        tree.insert(45);
+        tree.insert(55);
+        tree.insert(51);
+
         System.out.println("In order traversal:");
         tree.traverseInOrder();
         System.out.println("Successfull Find: " + tree.find(35));
         System.out.println("Unsuccessfull Find: " + tree.find(0));
         System.out.println("Find largest: " + tree.findLarget());
         System.out.println("Find smallest: " + tree.findSmallest());
+        tree.delete(22);
+        tree.traverseInOrder();
     }
 }

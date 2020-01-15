@@ -87,10 +87,10 @@ public class TreeNode {
         }
         return null;
     }
-    
+
     /**
      * Find largest node from the tree.
-     * 
+     *
      * @return largest node from the tree
      */
     public TreeNode findLargest() {
@@ -101,19 +101,69 @@ public class TreeNode {
         }
         return largest;
     }
-    
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
-    public TreeNode findSmallest(){
+    public TreeNode findSmallest() {
         TreeNode smallest = this;
-        if(this.leftChild != null){
-           smallest = this.leftChild;
-           return smallest.findSmallest();
+        if (this.leftChild != null) {
+            smallest = this.leftChild;
+            return smallest.findSmallest();
         }
         return smallest;
     }
+
+    /**
+     * Delete the node with given data.
+     *
+     * @param newData the data present in the node to be deleted
+     */
+    public void delete(int newData) {
+        TreeNode current = this;
+        TreeNode parent = null;
+        boolean isLeftNode = false;
+
+        while (current.data != newData) {
+            parent = current;
+            if (current.leftChild != null && newData < current.data) {
+                current = current.leftChild;
+                isLeftNode = true;
+            } else if (current.rightChild != null && newData > current.data) {
+                current = current.rightChild;
+                isLeftNode = false;
+            }
+        }
+        if (current.data == newData) {
+            System.out.println("Node to be deleted is found: " + current);
+            // case 1: node to be deleted is leaf node
+            if (current.leftChild == null && current.rightChild == null) {
+                if (isLeftNode) {
+                    System.out.println("Node to be deleted is leftChild of its parent");
+                    parent.leftChild = null;
+                } else {
+                    System.out.println("Node to be deleted is rightChild of its parent");
+                    parent.rightChild = null;
+                }
+            }
+            // case 2: node to be deleted has one child (either left or right)
+            // (leftChild != null && rightChild == null) | (leftChild == null && rightChild != null)
+            
+            // case 3: node to be deleted has two children
+            // leftChild != null && rightChild != null
+
+        } else {
+            System.out.println("Node to be deleted does not exist");
+        }
+
+
+    }
+    
+    public boolean isLeafNode(TreeNode node){
+        return node.leftChild == null && node.rightChild == null;
+    }
+
     /**
      * Traverse all the nodes of tree using in-order traversal (left, root,
      * right)
