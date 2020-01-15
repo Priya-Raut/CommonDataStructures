@@ -6,6 +6,7 @@
 package Trees.BinarySearchTree;
 
 /**
+ * A class which represents node of a binary search tree.
  *
  * @author piya
  */
@@ -39,6 +40,11 @@ public class TreeNode {
         this.rightChild = rightChild;
     }
 
+    /**
+     * Insert data in tree.
+     *
+     * @param newData data to be inserted in the tree
+     */
     public void insert(int newData) {
         // insert on left
         if (newData < this.data) {
@@ -62,12 +68,36 @@ public class TreeNode {
         }
     }
 
+    /**
+     * Find given data in tree.
+     *
+     * @param newData data to be searched in tree
+     * @return TreeNode if newData exists in tree, null otherwise
+     */
+    public TreeNode find(int newData) {
+        if (newData == this.data) {
+            System.out.println("Data found: " + this);
+            return this;
+        } else if (newData < this.data && this.leftChild != null) {
+            System.out.println("find in left subtree");
+            return this.leftChild.find(newData);
+        } else if (newData > this.data && this.rightChild != null) {
+            System.out.println("find in right subtree");
+            return this.rightChild.find(newData);
+        }
+        return null;
+    }
+
+    /**
+     * Traverse all the nodes of tree using in-order traversal (left, root,
+     * right)
+     */
     public void traverseInOrder() {
-        if(this.leftChild != null){
+        if (this.leftChild != null) {
             this.leftChild.traverseInOrder();
         }
         System.out.println(this);
-        if(this.rightChild != null){
+        if (this.rightChild != null) {
             this.rightChild.traverseInOrder();
         }
     }
