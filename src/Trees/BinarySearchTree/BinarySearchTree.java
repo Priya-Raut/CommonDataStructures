@@ -33,7 +33,36 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     *
+     * @param data
+     * @return
+     */
     public TreeNode delete(int data) {
+        return null;
+    }
+
+    /**
+     * Find smallest node from tree.
+     *
+     * @return smallest node from the tree
+     */
+    public TreeNode findSmallest() {
+        if (root != null) {
+            return root.findSmallest();
+        }
+        return null;
+    }
+
+    /**
+     * Find largest node from the tree.
+     *
+     * @return largest node from the tree
+     */
+    public TreeNode findLarget() {
+        if (root != null) {
+            return root.findLargest();
+        }
         return null;
     }
 
@@ -72,5 +101,7 @@ public class BinarySearchTree {
         tree.traverseInOrder();
         System.out.println("Successfull Find: " + tree.find(35));
         System.out.println("Unsuccessfull Find: " + tree.find(0));
+        System.out.println("Find largest: " + tree.findLarget());
+        System.out.println("Find smallest: " + tree.findSmallest());
     }
 }

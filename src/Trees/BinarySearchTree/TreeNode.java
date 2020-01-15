@@ -87,7 +87,33 @@ public class TreeNode {
         }
         return null;
     }
-
+    
+    /**
+     * Find largest node from the tree.
+     * 
+     * @return largest node from the tree
+     */
+    public TreeNode findLargest() {
+        TreeNode largest = this;
+        if (this.rightChild != null) {
+            largest = this.rightChild;
+            return largest.findLargest();
+        }
+        return largest;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public TreeNode findSmallest(){
+        TreeNode smallest = this;
+        if(this.leftChild != null){
+           smallest = this.leftChild;
+           return smallest.findSmallest();
+        }
+        return smallest;
+    }
     /**
      * Traverse all the nodes of tree using in-order traversal (left, root,
      * right)
