@@ -39,13 +39,70 @@ public class BinarySearchTree {
      * @param data the data present in the node to be deleted
      */
     public void delete(int data) {
-        if (this.root != null) {
-            //case 0: if node to be deleted is root
-            if(this.root.getData() == data){
-                this.root = null;
+        if (root == null) {
+            return;
+        }
+        TreeNode current = this.root;
+        TreeNode parent = this.root;
+        boolean isLeftNode = false;
+
+        while (current != null && current.getData() != data) {
+            System.out.println("current: " + current);
+            parent = current;
+            if (data < current.getData()) {
+                current = current.getLeftChild();
+                isLeftNode = true;
+            } else {
+                current = current.getRightChild();
+                isLeftNode = false;
             }
-            else{
-                root.delete(data);
+        }
+        if (current == null) {
+            System.out.println("Node to be deleted does not exist");
+            return;
+        }
+        if (current.getData() == data) {
+            System.out.println("Node to be deleted is found: " + current);
+            // case 1: node to be deleted is leaf node
+            if (current.isLeafNode()) {
+                if (current == root) {
+                    this.root = null;
+                } else if (isLeftNode) {
+                    System.out.println("Node to be deleted is leftChild of its parent");
+                    parent.setLeftChild(null);
+                } else {
+                    System.out.println("Node to be deleted is rightChild of its parent");
+                    parent.setRightChild(null);
+                }
+            } // case 2: node to be deleted has one child (either left or right)
+            else if (current.hasSingleLeftChild()) {
+                System.out.println("Single Left Child Current: " + current + " Parent: " + parent);
+                if (current == this.root) {
+                    System.out.println("Current node is root");
+                    this.root = current.getLeftChild();
+                } else if (isLeftNode) {
+                    System.out.println("Current node is parent's left child");
+                    parent.setLeftChild(current.getLeftChild());
+                } else {
+                    System.out.println("Current node is parent's right child");
+                    parent.setRightChild(current.getLeftChild());
+                }
+            } else if (current.hasSingleRightChild()) {
+                System.out.println("Single Right Child Current: " + current + " Parent: " + parent);
+                if (current == this.root) {
+                    System.out.println("Current node is root");
+                    this.root = current.getRightChild();
+                } else if (isLeftNode) {
+                    System.out.println("Current node is parent's left child");
+                    parent.setLeftChild(current.getRightChild());
+                } else {
+                    System.out.println("Current node is parent's right child");
+                    parent.setRightChild(current.getRightChild());
+                }
+            } // case 3: node to be deleted has two children
+            else if (current.hasTwoChildren()) {
+                System.out.println("Current: " + current + " Parent: " + parent);
+
             }
         }
     }
@@ -99,24 +156,26 @@ public class BinarySearchTree {
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
+        System.out.println("***** Insert Operation *****");
         tree.insert(25);
         tree.insert(20);
-        tree.insert(19);
-        tree.insert(18);
-        tree.insert(21);
-        tree.insert(22);
-        tree.insert(50);
-        tree.insert(45);
-        tree.insert(55);
-        tree.insert(51);
+        tree.insert(15);
+        tree.insert(10);
+        tree.insert(17);
+        tree.insert(8);
+        tree.insert(30);
+        tree.insert(32);
+        tree.insert(31);
+        tree.insert(33);
 
-        System.out.println("In order traversal:");
+        System.out.println("****** In order traversal *****");
         tree.traverseInOrder();
+        System.out.println("***** Find Operation **** ");
         System.out.println("Successfull Find: " + tree.find(35));
         System.out.println("Unsuccessfull Find: " + tree.find(0));
         System.out.println("Find largest: " + tree.findLarget());
         System.out.println("Find smallest: " + tree.findSmallest());
-        tree.delete(22);
+        tree.delete(30);
         tree.traverseInOrder();
     }
 }

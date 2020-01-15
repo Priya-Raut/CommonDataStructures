@@ -116,45 +116,39 @@ public class TreeNode {
     }
 
     /**
-     * Delete the node with given data.
+     * Check if node is a leaf node or not.
      *
-     * @param newData the data present in the node to be deleted
+     * @return true if node is a leaf node, false otherwise
      */
-    public void delete(int newData) {
-        TreeNode current = this;
-        TreeNode parent = null;
-        boolean isLeftNode = false;
+    public boolean isLeafNode() {
+        return this.leftChild == null && this.rightChild == null;
+    }
 
-        while (current.data != newData) {
-            parent = current;
-            if (current.leftChild != null && newData < current.data) {
-                current = current.leftChild;
-                isLeftNode = true;
-            } else if (current.rightChild != null && newData > current.data) {
-                current = current.rightChild;
-                isLeftNode = false;
-            }
-        }
-        if (current.data == newData) {
-            System.out.println("Node to be deleted is found: " + current);
-            // case 1: node to be deleted is leaf node
-            if (current.leftChild == null && current.rightChild == null) {
-                if (isLeftNode) {
-                    System.out.println("Node to be deleted is leftChild of its parent");
-                    parent.leftChild = null;
-                } else {
-                    System.out.println("Node to be deleted is rightChild of its parent");
-                    parent.rightChild = null;
-                }
-            }
-            // case 2: node to be deleted has one child (either left or right)
-            // (leftChild != null && rightChild == null) | (leftChild == null && rightChild != null)
-
-            // case 3: node to be deleted has two children
-            // leftChild != null && rightChild != null
-        } else {
-            System.out.println("Node to be deleted does not exist");
-        }
+    /**
+     * Check if node has single left child or not.
+     *
+     * @return true if node has single left child, false otherwise
+     */
+    public boolean hasSingleLeftChild() {
+        return (this.leftChild != null && this.rightChild == null);
+    }
+    
+    /**
+     * Check if node has single right child or not.
+     *
+     * @return true if node has single right child, false otherwise
+     */
+    public boolean hasSingleRightChild(){
+        return this.leftChild == null && this.rightChild != null;
+    }
+    
+    /**
+     * Check if node has two children or not.
+     *
+     * @return true if node has two children, false otherwise
+     */
+    public boolean hasTwoChildren() {
+        return this.leftChild != null && this.rightChild != null;
     }
 
     /**
