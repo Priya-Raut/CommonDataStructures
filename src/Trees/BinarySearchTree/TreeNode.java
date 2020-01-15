@@ -149,19 +149,12 @@ public class TreeNode {
             }
             // case 2: node to be deleted has one child (either left or right)
             // (leftChild != null && rightChild == null) | (leftChild == null && rightChild != null)
-            
+
             // case 3: node to be deleted has two children
             // leftChild != null && rightChild != null
-
         } else {
             System.out.println("Node to be deleted does not exist");
         }
-
-
-    }
-    
-    public boolean isLeafNode(TreeNode node){
-        return node.leftChild == null && node.rightChild == null;
     }
 
     /**
