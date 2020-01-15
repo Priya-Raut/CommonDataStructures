@@ -40,7 +40,6 @@ public class TreeNode {
     }
 
     public void insert(int newData) {
-
         // insert on left
         if (newData < this.data) {
             if (this.leftChild == null) {
@@ -63,9 +62,19 @@ public class TreeNode {
         }
     }
 
+    public void traverseInOrder() {
+        if(this.leftChild != null){
+            this.leftChild.traverseInOrder();
+        }
+        System.out.println(this);
+        if(this.rightChild != null){
+            this.rightChild.traverseInOrder();
+        }
+    }
+
     @Override
     public String toString() {
-        return "TreeNode{" + "data=" + data + '}';
+        return "data=" + data + ' ';
     }
 
 }

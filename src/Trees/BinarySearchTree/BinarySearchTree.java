@@ -22,7 +22,7 @@ public class BinarySearchTree {
         if (this.root == null) {
             System.out.println("New node becomes root node");
             this.root = new TreeNode(data);
-        } else {      
+        } else {
             this.root.insert(data);
         }
     }
@@ -36,16 +36,19 @@ public class BinarySearchTree {
     }
 
     public void traverseInOrder() {
-
+        if (this.root != null) {
+            root.traverseInOrder();
+        }
     }
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(25);
-        System.out.println("Root: " + tree.root);
         tree.insert(20);
-        System.out.println("Left Child: " + tree.root.getLeftChild());
         tree.insert(30);
-        System.out.println("Right Child: " + tree.root.getRightChild());
+        tree.insert(22);
+        tree.insert(19);
+        tree.insert(35);
+        tree.traverseInOrder();
     }
 }
