@@ -174,6 +174,18 @@ public class BinarySearchTree {
         }
     }
     
+    /**
+     * Returns height of the tree.
+     * 
+     * @return height of the tree
+     */
+    public int height(){
+        if(root != null){
+            return root.height();
+        }
+        return 0;
+    }
+    
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         System.out.println("***** Insert Operation *****");
@@ -198,6 +210,7 @@ public class BinarySearchTree {
         System.out.println("Unsuccessfull Find: " + tree.find(0));
         System.out.println("Find largest: " + tree.findLarget());
         System.out.println("Find smallest: " + tree.findSmallest());
+        System.out.println("Hight: " + tree.height());
         tree.delete(30);
 
         System.out.println("****** In order traversal *****");

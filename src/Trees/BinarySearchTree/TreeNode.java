@@ -125,16 +125,16 @@ public class TreeNode {
     public boolean hasSingleLeftChild() {
         return (this.leftChild != null && this.rightChild == null);
     }
-    
+
     /**
      * Check if node has single right child or not.
      *
      * @return true if node has single right child, false otherwise
      */
-    public boolean hasSingleRightChild(){
+    public boolean hasSingleRightChild() {
         return this.leftChild == null && this.rightChild != null;
     }
-    
+
     /**
      * Check if node has two children or not.
      *
@@ -157,35 +157,54 @@ public class TreeNode {
             this.rightChild.traverseInOrder();
         }
     }
-    
+
     /**
      * Traverse all the nodes of tree using pre-order traversal (root, left
      * right)
      */
-    public void traversePreOrder(){
+    public void traversePreOrder() {
         System.out.print(this.data + " ");
-        if(this.leftChild != null){
+        if (this.leftChild != null) {
             this.leftChild.traversePreOrder();
         }
-        if(this.rightChild != null){
+        if (this.rightChild != null) {
             this.rightChild.traversePreOrder();
         }
     }
-    
+
     /**
-     * Traverse all the nodes of tree using post-order traversal (left
-     * right, root)
+     * Traverse all the nodes of tree using post-order traversal (left right,
+     * root)
      */
-    public void traversePostOrder(){
-        if(this.leftChild != null){
+    public void traversePostOrder() {
+        if (this.leftChild != null) {
             this.leftChild.traversePostOrder();
         }
-        if(this.rightChild != null){
+        if (this.rightChild != null) {
             this.rightChild.traversePostOrder();
         }
         System.out.print(this.data + " ");
     }
-
+    
+    /**
+     * Returns height of the tree.
+     * 
+     * @return height of the tree
+     */
+    public int height() {
+        int left = 0 , right = 0;
+        if (isLeafNode()) {
+            return 1;
+        }
+        if (this.leftChild != null) {
+            left = this.leftChild.height();
+        }
+        if (this.rightChild != null) {
+            right = this.rightChild.height();
+        }
+        return (left > right)?(left + 1):(right + 1);
+    }
+    
     @Override
     public String toString() {
         return "data=" + data + ' ';
