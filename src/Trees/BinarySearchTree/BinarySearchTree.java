@@ -153,20 +153,43 @@ public class BinarySearchTree {
             root.traverseInOrder();
         }
     }
-
+    
+    /**
+     * Traverse all the nodes of tree using pre-order traversal (root, left
+     * right)
+     */
+    public void traversePreOrder(){
+        if(root != null){
+            root.traversePreOrder();
+        }
+    }
+    
+    /**
+     * Traverse all the nodes of tree using post-order traversal (left
+     * right, root)
+     */
+    public void traversePostOrder(){
+        if(root != null){
+            root.traversePostOrder();
+        }
+    }
+    
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         System.out.println("***** Insert Operation *****");
-        tree.insert(25);
-        tree.insert(20);
-        tree.insert(15);
-        tree.insert(10);
-        tree.insert(17);
-        tree.insert(8);
-        tree.insert(30);
-        tree.insert(32);
-        tree.insert(31);
+        tree.insert(52);
         tree.insert(33);
+        tree.insert(25);
+        tree.insert(12);
+        tree.insert(27);
+        tree.insert(39);
+        tree.insert(34);
+        tree.insert(48);
+        tree.insert(65);
+        tree.insert(60);
+        tree.insert(78);
+        tree.insert(72);
+        tree.insert(90);
 
         System.out.println("****** In order traversal *****");
         tree.traverseInOrder();
@@ -176,6 +199,12 @@ public class BinarySearchTree {
         System.out.println("Find largest: " + tree.findLarget());
         System.out.println("Find smallest: " + tree.findSmallest());
         tree.delete(30);
+
+        System.out.println("****** In order traversal *****");
         tree.traverseInOrder();
+        System.out.println("\n****** Pre order traversal *****");
+        tree.traversePreOrder();
+        System.out.println("\n****** Post order traversal *****");
+        tree.traversePostOrder();
     }
 }

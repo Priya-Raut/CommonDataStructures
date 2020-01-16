@@ -49,20 +49,15 @@ public class TreeNode {
         // insert on left
         if (newData < this.data) {
             if (this.leftChild == null) {
-                System.out.println("New node becomes left node");
                 this.leftChild = new TreeNode(newData);
             } else {
-                System.out.println("Left insert");
                 this.leftChild.insert(newData);
             }
         } // insert on right
         else {
             if (this.rightChild == null) {
-                System.out.println("New node becomes right node");
                 this.rightChild = new TreeNode(newData);
             } else {
-
-                System.out.println("Right insert");
                 this.rightChild.insert(newData);
             }
         }
@@ -76,13 +71,10 @@ public class TreeNode {
      */
     public TreeNode find(int newData) {
         if (newData == this.data) {
-            System.out.println("Data found: " + this);
             return this;
         } else if (newData < this.data && this.leftChild != null) {
-            System.out.println("find in left subtree");
             return this.leftChild.find(newData);
         } else if (newData > this.data && this.rightChild != null) {
-            System.out.println("find in right subtree");
             return this.rightChild.find(newData);
         }
         return null;
@@ -103,8 +95,9 @@ public class TreeNode {
     }
 
     /**
+     * Find smallest node from the tree.
      *
-     * @return
+     * @return largest node from the tree
      */
     public TreeNode findSmallest() {
         TreeNode smallest = this;
@@ -159,10 +152,38 @@ public class TreeNode {
         if (this.leftChild != null) {
             this.leftChild.traverseInOrder();
         }
-        System.out.println(this);
+        System.out.print(this.data + " ");
         if (this.rightChild != null) {
             this.rightChild.traverseInOrder();
         }
+    }
+    
+    /**
+     * Traverse all the nodes of tree using pre-order traversal (root, left
+     * right)
+     */
+    public void traversePreOrder(){
+        System.out.print(this.data + " ");
+        if(this.leftChild != null){
+            this.leftChild.traversePreOrder();
+        }
+        if(this.rightChild != null){
+            this.rightChild.traversePreOrder();
+        }
+    }
+    
+    /**
+     * Traverse all the nodes of tree using post-order traversal (left
+     * right, root)
+     */
+    public void traversePostOrder(){
+        if(this.leftChild != null){
+            this.leftChild.traversePostOrder();
+        }
+        if(this.rightChild != null){
+            this.rightChild.traversePostOrder();
+        }
+        System.out.print(this.data + " ");
     }
 
     @Override
