@@ -102,7 +102,26 @@ public class BinarySearchTree {
             } // case 3: node to be deleted has two children
             else if (current.hasTwoChildren()) {
                 System.out.println("Current: " + current + " Parent: " + parent);
-
+                TreeNode successor = current.getRightChild();
+                TreeNode successorParent = current.getRightChild();
+                //find the successor node, left most node the target node's right subtree
+                while (successor.getLeftChild() != null) {
+                    successorParent = successor;
+                    successor = successor.getLeftChild();
+                }
+                System.out.println("Successor: " + successor + "successorParent: " + successorParent);
+                if (successor != current.getRightChild()) {
+                    successorParent.setLeftChild(successor.getRightChild());
+                    successor.setRightChild(successorParent);
+                }
+                if (current == this.root) {
+                    this.root = successor;
+                } else if (isLeftNode) {
+                    parent.setLeftChild(successor);
+                } else {
+                    parent.setRightChild(successor);
+                }
+                successor.setLeftChild(current.getLeftChild());
             }
         }
     }
@@ -153,39 +172,39 @@ public class BinarySearchTree {
             root.traverseInOrder();
         }
     }
-    
+
     /**
      * Traverse all the nodes of tree using pre-order traversal (root, left
      * right)
      */
-    public void traversePreOrder(){
-        if(root != null){
+    public void traversePreOrder() {
+        if (root != null) {
             root.traversePreOrder();
         }
     }
-    
+
     /**
-     * Traverse all the nodes of tree using post-order traversal (left
-     * right, root)
+     * Traverse all the nodes of tree using post-order traversal (left right,
+     * root)
      */
-    public void traversePostOrder(){
-        if(root != null){
+    public void traversePostOrder() {
+        if (root != null) {
             root.traversePostOrder();
         }
     }
-    
+
     /**
      * Returns height of the tree.
-     * 
+     *
      * @return height of the tree
      */
-    public int height(){
-        if(root != null){
+    public int height() {
+        if (root != null) {
             return root.height();
         }
         return 0;
     }
-    
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         System.out.println("***** Insert Operation *****");
@@ -205,19 +224,18 @@ public class BinarySearchTree {
 
         System.out.println("****** In order traversal *****");
         tree.traverseInOrder();
+        System.out.println("\n****** Pre order traversal *****");
+        tree.traversePreOrder();
+        System.out.println("\n****** Post order traversal *****");
+        tree.traversePostOrder();
         System.out.println("***** Find Operation **** ");
         System.out.println("Successfull Find: " + tree.find(35));
         System.out.println("Unsuccessfull Find: " + tree.find(0));
         System.out.println("Find largest: " + tree.findLarget());
         System.out.println("Find smallest: " + tree.findSmallest());
         System.out.println("Hight: " + tree.height());
-        tree.delete(30);
-
+        tree.delete(39);
         System.out.println("****** In order traversal *****");
         tree.traverseInOrder();
-        System.out.println("\n****** Pre order traversal *****");
-        tree.traversePreOrder();
-        System.out.println("\n****** Post order traversal *****");
-        tree.traversePostOrder();
     }
 }
