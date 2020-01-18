@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class Heap {
 
     private int[] heapData;
-    private int curentPosition = -1;
+    private static int curentPosition = -1;
 
     public Heap(int size) {
         this.heapData = new int[size];
@@ -28,8 +28,8 @@ public class Heap {
     }
 
     /**
-     * Insert operation in the heap. First insert node at the end of heapData.
-     * If new node is greater than its parent, fix the heap upwards.
+     * Insert new node in the heap. First insert node at the end of heapData. If
+     * new node is greater than its parent, fix the heap upwards.
      *
      * @param key to be inserted into heap
      */
@@ -41,13 +41,39 @@ public class Heap {
         heapData[curentPosition] = key;
         System.out.println("Heap before fixing: " + Arrays.toString(heapData));
         if (curentPosition > 0) {
-            fixUp(heapData, curentPosition);
+            fixUp(heapData);
             System.out.println("Heap after fixing: " + Arrays.toString(heapData));
         }
     }
 
+    /**
+     * Delete a key from the heap.
+     *
+     * @param key to be deleted from the heap.
+     */
     public void delete(int key) {
-
+        int deleteIndex = -1;
+        //Find the key to be deleted
+        for (int i = 0; i < heapData.length; i++) {
+            if (key == heapData[i]) {
+                deleteIndex = i;
+            }
+        }
+        if (deleteIndex >= 0) {
+            System.out.println("Key to be deleted is found at: " + deleteIndex);
+        } else {
+            System.out.println("Key to be deleted is NOT found: ");
+            return;
+        }
+        //Put heapData[curentPosition] in heapData[deleteIndex]
+        System.out.println("curentPosition: " + curentPosition);
+        heapData[deleteIndex] = heapData[curentPosition];
+        heapData[curentPosition--] = 0;
+        System.out.println("Heap after deleting element: " + Arrays.toString(heapData));
+        System.out.println("curentPosition: " + curentPosition);
+        //Fix the heap, since smaller node than parent is present in heap
+        fixDown(heapData);
+        System.out.println("Heap after fixing: " + Arrays.toString(heapData));
     }
 
     /**
@@ -56,10 +82,9 @@ public class Heap {
      *
      * @param heapData array where some elements does not follow heap
      * properties.
-     * @param curentPosition current position in the heap.
      * @return an array which follows heap properties.
      */
-    public int[] fixUp(int[] heapData, int curentPosition) {
+    public int[] fixUp(int[] heapData) {
         int i = curentPosition;
         int childIndex = i;
         int parentIndex = (i - 1) / 2;
@@ -79,12 +104,38 @@ public class Heap {
     }
 
     /**
+     * Fix heap by moving invalid key down in the levels of heap
      *
-     * @param heapData
-     * @param limit
-     * @return
+     * @param heapData heap to be fixed
+     * @return fixed heap
      */
-    public int[] fixDown(int[] heapData, int limit) {
+    public int[] fixDown(int[] heapData) {
+        int i = 0;
+        int parentIndex = i;
+        int leftIndex = 2 * i + 1;
+        int rightIndex = 2 * i + 2;
+        int temp = 0;
+        int largerIndex = 0;
+
+        while (i<=curentPosition) {
+            if (leftIndex <= curentPosition && rightIndex <= curentPosition) {
+                largerIndex = (heapData[leftIndex] > heapData[rightIndex]) ? leftIndex : rightIndex;
+            } else if (leftIndex <= curentPosition && rightIndex > curentPosition) {
+
+            } else if (leftIndex > curentPosition && rightIndex > curentPosition) {
+                break;
+            }
+            if (heapData[parentIndex] < heapData[largerIndex]) {
+                temp = heapData[parentIndex];
+                heapData[parentIndex] = heapData[largerIndex];
+                heapData[largerIndex] = temp;
+            }
+            i++;
+            parentIndex = i;
+            leftIndex = 2 * i + 1;
+            rightIndex = 2 * i + 2;
+            System.out.println("Immediate fix: " + Arrays.toString(heapData));
+        }
         return heapData;
     }
 
@@ -110,5 +161,7 @@ public class Heap {
 //      Throws runtime exception            
 //      heap.insert(10);
         System.out.println("Heap data: " + Arrays.toString(heap.getHeapData()));
+        heap.delete(50);
+        heap.delete(65);
     }
 }
