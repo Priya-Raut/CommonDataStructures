@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9d902d0-807d-4553-9fd4-7be5a52fd9a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/usage/array/CheckForASubArrayWithZeroSum_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/CheckForASubArrayWithZeroSum_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/CountSubArraysWithZeroSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/MergeKSortedArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/PrintAllSubstrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/PrintSubArraysWithZeroSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/usage/array/PrintTopThreeMostOccurringCharacters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Array/MergeSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/array/MergeSortedArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Array/NonRepeatingIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/array/NonRepeatingIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Array/RearrangePositiveNegativeElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/array/RearrangePositiveNegativeElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Array/SecondMinimumElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/array/SecondMinimumElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/graph/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/CheckIsGraphATree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/graph/CheckIsGraphATree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/DeapthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/graph/DeapthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/NumberOfEdges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/graph/NumberOfEdges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/ShortestPathBetweenVertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/graph/ShortestPathBetweenVertices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/implementation/GraphWithAdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/graph/GraphWithAdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/implementation/GraphWithAjacencyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/graph/GraphWithAjacencyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hashtable/CheckIfArraysAreDisjoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/hashtable/CheckIfArraysAreDisjoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hashtable/FindIsAnArraySubsetOfAnotherArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/hashtable/FindIsAnArraySubsetOfAnotherArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hashtable/SymmetricPairsInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/hashtable/SymmetricPairsInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hashtable/TraceCompletePathOfJourney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/hashtable/TraceCompletePathOfJourney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Heap/Heap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/heap/Heap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/DNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/doubly_linkedlist/DNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/DoublyEndedLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/doubly_ended_linkedlist/DoublyEndedLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/DoublyEndedLinkedListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/doubly_ended_linkedlist/DoublyEndedLinkedListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/doubly_linkedlist/DoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/DoublyLinkedListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/doubly_linkedlist/DoublyLinkedListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/singly_linkedlist/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/LinkedListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/singly_linkedlist/LinkedListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/Implementation/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/linkedlist/singly_linkedlist/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/LinkedListReversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/linkedlist/LinkedListReversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/LoopDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/linkedlist/LoopDetection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/RemoveDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/linkedlist/RemoveDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/ReturnNthNodeFromEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/linkedlist/ReturnNthNodeFromEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/GenerateBinaryNumbersFrom1toN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/queue/GenerateBinaryNumbersFrom1toN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/ImplementStackUsingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/queue/ImplementStackUsingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/Implementation/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/queue/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/ReverseFirstKElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/queue/ReverseFirstKElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/CheckBalancedParanthesisInExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/stack/CheckBalancedParanthesisInExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/PostfixExpressionEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/stack/PostfixExpressionEvaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/SortValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/stack/SortValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/stack/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinarySearchTree/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/tree/binary_search_tree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinarySearchTree/FindNodesAtKDistanceFromRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trees/BinarySearchTree/FindNodesAtKDistanceFromRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinarySearchTree/KthMaximumValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trees/BinarySearchTree/KthMaximumValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinarySearchTree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/tree/binary_search_tree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinaryTree/AncestorsOfNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trees/BinaryTree/FindHeight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrieOrPrefixTrees/FormWordsOfDictionaryUsingTrie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trie/FormWordsOfDictionaryUsingTrie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrieOrPrefixTrees/PrintAllWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trie/PrintAllWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrieOrPrefixTrees/SortElementsOfAnArrayUsingTrie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trie/SortElementsOfAnArrayUsingTrie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrieOrPrefixTrees/T9Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trie/T9Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrieOrPrefixTrees/TotalNumberOfWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usage/trie/TotalNumberOfWords.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ez2XSo5yJNeJVqbC1Zu1rvrrJH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Array" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MergeKSortedArrays">
+    <configuration name="MergeKSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="usage.array.MergeKSortedArrays" />
+      <module name="CommonDataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usage.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintAllSubstrings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SubArryQuestions.PrintAllSubstrings" />
+      <module name="CommonDataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SubArryQuestions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrintSubArraysWithZeroSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SubArryQuestions.PrintSubArraysWithZeroSum" />
+      <module name="CommonDataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SubArryQuestions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MergeKSortedArrays" />
+        <item itemvalue="Application.PrintAllSubstrings" />
+        <item itemvalue="Application.PrintSubArraysWithZeroSum" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9d902d0-807d-4553-9fd4-7be5a52fd9a8" name="Default Changelist" comment="" />
+      <created>1595310139138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595310139138</updated>
+      <workItem from="1595310141485" duration="239000" />
+      <workItem from="1595310547907" duration="2748000" />
+      <workItem from="1595489735751" duration="740000" />
+      <workItem from="1596883391224" duration="581000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1595326628494">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1595326628494" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1595326628493">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1595326628493" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1595326628492">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1595326628492" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1595326628493">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1595326628493" />
+    <state x="421" y="176" width="598" height="548" key="find.popup" timestamp="1595310668462">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="176" width="598" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1595310668462" />
+  </component>
+</project>
